@@ -5,7 +5,9 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.pratap.model.Account;
+import com.pratap.repository.AccountRepository;
 
 @SpringBootApplication
 public class SpringJdbcBootApplication implements ApplicationRunner{
@@ -15,13 +17,20 @@ public class SpringJdbcBootApplication implements ApplicationRunner{
 	}
 
 	@Autowired
-	JdbcTemplate template;
+	AccountRepository repo;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println(template);
-		System.out.println(template.getDataSource());
+		// repo.createAccount(new Account(1,"jack", 5000));
+		// repo.createAccount(new Account(2,"jones", 50000));
 		
+		// repo.updateAccountBalance(1, 10000);
+		
+		// repo.updateNameById(1, "jimi");
+		
+		// repo.updateAccountByName("jones", 20000);
+		
+		repo.deleteAccountById(2);
 	}
 
 }
