@@ -1,5 +1,7 @@
 package com.pratap;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -30,7 +32,16 @@ public class SpringJdbcBootApplication implements ApplicationRunner{
 		
 		// repo.updateAccountByName("jones", 20000);
 		
-		repo.deleteAccountById(2);
+		// repo.deleteAccountById(2);
+		
+		List<Account> accounts = repo.getAllAccounts();
+		System.out.println(accounts);
+		
+		Account account1 = repo.getAccountById(1);
+		System.out.println(account1);
+		
+		Account accountJimi = repo.getAccountByName("jimi");
+		System.out.println(accountJimi);
 	}
 
 }

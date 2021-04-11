@@ -5,6 +5,9 @@ public class Account {
 	private String name;
 	private double balance;
 	
+	public Account() {
+		
+	}
 	public Account(int accid, String name, double balance) {
 		this.accid = accid;
 		this.name = name;
