@@ -41,11 +41,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
+			
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.6</version>
+				<version>0.8.2</version>
 				<executions>
 					<execution>
 						<id>default-prepare-agent</id>
@@ -53,6 +53,7 @@
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
+
 					<execution>
 						<id>default-report</id>
 						<phase>prepare-package</phase>
@@ -62,7 +63,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 	</build>
 
